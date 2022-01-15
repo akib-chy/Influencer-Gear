@@ -107,11 +107,18 @@ h1 {
 }
 .header-right-section img {
   width: 90%;
-  transition: all ease-in-out 1s;
+  animation: img 2.5s infinite;
 }
-.header-right-section img:hover {
-  transform: scale(1.4) rotate(360deg) skew(-10deg);
-  cursor: pointer;
+@keyframes img {
+  0% {
+    transform: translateY(-40px);
+  }
+  50% {
+    transform: translateY(40px);
+  }
+  100% {
+    transform: translateY(-40px);
+  }
 }
 /*----------------------
    LOGO-SECTION-STYLE 
@@ -137,6 +144,10 @@ h2 {
   background: rgb(255, 255, 255);
   border-radius: 5px;
   box-shadow: 0 1px 7px rgba(0, 0, 0, 0.1);
+  transition: all ease-in-out 0.4s;
+}
+.product:hover {
+  transform: translateY(-25px);
 }
 .product-img img {
   width: 100%;
@@ -231,6 +242,9 @@ START-CONTACT-SECTION-STYLE
   transition: all ease 0.4s;
 }
 .box:hover {
+  transform: translateY(20px);
+}
+.box:hover {
   color: #fff;
   background: #e02c6eb9;
 }
@@ -252,6 +266,20 @@ START-CONTACT-SECTION-STYLE
   font-size: 15px;
   border: 1px solid #e02c6d;
   border-radius: 5px;
+}
+#contact-section form input[type="button"] {
+  width: 20%;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  background: #e02c6d;
+  font-weight: 700;
+  transition: all ease 0.5s;
+  cursor: pointer;
+}
+#contact-section form input[type="button"]:hover {
+  background: #fff;
+  color: #e02c6d;
 }
 #contact-section form textarea {
   padding: 20px 10px;
@@ -278,6 +306,10 @@ footer p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+footer .design a {
+  color: #fff;
+  font-weight: 700;
 }
 .footer-icon a {
   margin: 0 15px;
