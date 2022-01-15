@@ -267,7 +267,7 @@ START-CONTACT-SECTION-STYLE
   border: 1px solid #e02c6d;
   border-radius: 5px;
 }
-#contact-section form input[type="button"] {
+#contact-section form input[type="submit"] {
   width: 20%;
   padding: 0;
   color: #fff;
@@ -277,7 +277,7 @@ START-CONTACT-SECTION-STYLE
   transition: all ease 0.5s;
   cursor: pointer;
 }
-#contact-section form input[type="button"]:hover {
+#contact-section form input[type="submit"]:hover {
   background: #fff;
   color: #e02c6d;
 }
