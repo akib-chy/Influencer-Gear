@@ -63,9 +63,26 @@ nav ul li a {
   font-weight: 600;
   color: #3a3a3a;
   padding-bottom: 10px;
+  transition: all ease-in-out 0.4s;
 }
-nav ul li .nav-link:hover {
-  border-bottom: 1px solid #000;
+nav ul li a:hover {
+  color: #e02c6d;
+}
+.nav-link {
+  position: relative;
+}
+nav ul li .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #e02c6d;
+  transition: all ease-in-out 0.4s;
+}
+nav ul li .nav-link:hover::after {
+  width: 100%;
 }
 nav ul li .h-icon {
   font-size: 24px;
@@ -135,9 +152,28 @@ h1 {
 /*--------------------------
     PRODUCT-SECTION-STYLE 
 ---------------------------*/
-h2 {
+.top-section-heading {
   font-size: 28px;
   text-align: center;
+  position: relative;
+  padding: 20px 0;
+}
+.top-section-heading::after,
+.top-section-heading::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 40%;
+  height: 4px;
+  transform: translateX(-50%);
+  background: #18191f;
+}
+.top-section-heading::after {
+  width: 10%;
+  background: #e02c6d;
+  border-left: 15px solid #fff;
+  border-right: 15px solid #fff;
 }
 .product {
   padding: 15px;
